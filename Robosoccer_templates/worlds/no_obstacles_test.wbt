@@ -1,0 +1,55 @@
+#VRML_SIM R2020b utf8
+WorldInfo {
+  basicTimeStep 4
+  contactProperties [
+    ttball_dribbler_contact {
+    }
+    ttball_default_contact {
+    }
+    omniwheel_default_contact {
+    }
+  ]
+}
+Viewpoint {
+  orientation 0 0.7071067811865475 0.7071067811865475 3.14
+  position 0.15664351803954002 6.855632675974137 -0.015816838503164288
+  follow "akb_forward_1"
+  followType "None"
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+  castShadows FALSE
+}
+arena {
+  translation 0 -0.5 0
+}
+ball {
+  translation 0 0.0198956 0
+  rotation -0.00420993558024365 0.3985436515604442 0.9171397026861706 -2.99804537094803
+  controller "ball_controller"
+}
+generic_agent {
+  translation -1.50432 -0.00054423 -1.36486
+  rotation 0.00013177161687005575 0.9999999857784174 -0.00010525875758120135 -1.5844956422055978
+  controller "generic_agent_final_controller"
+  name "akb_forward_1"
+}
+central_server {
+  translation 0 0.17 1.73
+  controller "central_server_controller"
+}
+team_server {
+  translation -1.79 0.22 1.78
+  name "right_server"
+  controller "game_server_controller"
+}
+WoodenBox {
+  translation 2.38 0.3 0
+  size 0.3 0.6 0.8
+}
+WoodenBox {
+  translation -2.39 0.3 0
+  name "wooden box(1)"
+  size 0.3 0.6 0.8
+}

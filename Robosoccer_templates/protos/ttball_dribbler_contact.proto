@@ -1,0 +1,12 @@
+PROTO ttball_dribbler_contact
+[]
+{
+    ContactProperties {
+      material1 "dribbler"
+      material2 "ttball"
+      coulombFriction [
+        30
+      ]
+      bounce 0
+    }
+}

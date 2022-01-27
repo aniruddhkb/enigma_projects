@@ -1,0 +1,9 @@
+PROTO omniwheel_default_contact[]
+{
+    ContactProperties {
+      material1 "omniwheel"
+      coulombFriction [
+        0, 0.5, 0
+      ]
+    }
+}

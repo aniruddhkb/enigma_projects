@@ -1,0 +1,48 @@
+PROTO team_server
+[
+    field SFVec3f translation 0 0 0
+    field SFString name "team_server"
+    field SFString controller ""
+    field SFInt32 receiver_channel 2
+    field SFInt32 emitter_1_channel 4
+    field SFInt32 emitter_2_channel 5
+    field SFInt32 emitter_3_channel 6 
+    field SFInt32 emitter_4_channel 7
+]
+{
+   Robot {
+  translation IS translation
+  children [
+    Emitter {
+      name "emitter 1"
+      channel IS emitter_1_channel
+    }
+    Emitter {
+      name "emitter 2"
+      channel IS emitter_2_channel
+    }
+    Emitter {
+      name "emitter 3"
+      channel IS emitter_3_channel
+    }
+    Emitter {
+      name "emitter 4"
+      channel IS emitter_4_channel
+    }
+    Receiver {
+      channel IS receiver_channel
+    }
+    Shape {
+      appearance PBRAppearance {
+        baseColor 1 0 0
+        roughness 0.5
+      }
+      geometry DEF SIDE_SERVER_SHAPE Box {
+        size 0.1 0.3 0.1
+      }
+    }
+  ]
+  name IS name
+  controller IS controller
+}
+}

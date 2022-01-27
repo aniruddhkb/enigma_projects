@@ -1,0 +1,38 @@
+PROTO central_server
+[
+    field SFVec3f translation 0 0 0
+    field SFString controller ""
+    field SFInt32 receiver_channel 1
+    field SFInt32 right_emitter_channel 2
+    field SFInt32 left_emitter_channel 3
+]
+{
+    Robot {
+  translation IS translation
+  children [
+    Emitter {
+      name "left_emitter"
+      channel IS left_emitter_channel
+    }
+    Emitter {
+      name "right_emitter"
+      channel IS right_emitter_channel
+    }
+    Receiver {
+      channel IS receiver_channel
+    }
+    DEF CENTRAL_SERVER_SHAPE Shape {
+      appearance PBRAppearance {
+        baseColor 0 0.2 0.2
+        roughness 0.5
+      }
+      geometry Box {
+        size 0.3 0.3 0.2
+      }
+    }
+  ]
+  name "centralServer"
+  boundingObject USE CENTRAL_SERVER_SHAPE
+  controller IS controller
+}
+}

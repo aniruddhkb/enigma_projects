@@ -1,0 +1,145 @@
+#VRML_SIM R2019b utf8
+WorldInfo {
+  basicTimeStep 4
+  contactProperties [
+    ttball_dribbler_contact {
+    }
+    ttball_default_contact {
+    }
+    omniwheel_default_contact {
+    }
+  ]
+}
+Viewpoint {
+  orientation 0.9984648671524684 -0.039697327201228726 0.03862682067271743 5.68089544993169
+  position -0.7434511140219694 3.8922223973303494 5.354110221736339
+  follow "akb_forward_1"
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+  castShadows FALSE
+}
+arena {
+  translation 0 -0.660699 0
+}
+ball {
+  translation 0 0.0198956 0
+  rotation -0.00420993558024365 0.3985436515604442 0.9171397026861706 -2.99804537094803
+  controller "ball_controller"
+}
+generic_agent {
+  translation -1.9438 -0.000540383 -1.40076
+  rotation 0.00013177161687005575 0.9999999857784174 -0.00010525875758120135 -1.5844956422055978
+  controller "generic_agent_final_controller"
+  color 0.643137 0 0
+  name "akb_forward_1"
+}
+central_server {
+  translation 0 0.17 1.73
+  controller "central_server_controller"
+}
+team_server {
+  translation -1.79 0.22 1.78
+  name "right_server"
+  controller "game_server_controller"
+}
+generic_agent {
+  translation -0.39 -0.00011384 1.35099e-07
+  rotation 0 1 0 -3.1415923071795864
+  controller "dynamic_obstacle_controller"
+  name "obstacle"
+}
+generic_agent {
+  translation 0.433 -0.00011384 0.25
+  rotation 0 1 0 -3.1415923071795864
+  controller "dynamic_obstacle_controller_2"
+  color 0 0 0
+  name "obstacle(5)"
+}
+generic_agent {
+  translation 0.433 -0.00011384 -0.25
+  rotation 0 1 0 -3.1415923071795864
+  controller "dynamic_obstacle_controller_2"
+  color 0 0 0
+  name "obstacle(7)"
+}
+generic_agent {
+  translation 0.433 -0.00011384 -0.75
+  rotation 0 1 0 -3.1415923071795864
+  controller "dynamic_obstacle_controller_2"
+  color 0 0 0
+  name "obstacle(11)"
+}
+generic_agent {
+  translation 0.433 -0.00011384 0.75
+  rotation 0 1 0 -3.1415923071795864
+  controller "dynamic_obstacle_controller_2"
+  color 0 0 0
+  name "obstacle(6)"
+}
+generic_agent {
+  translation 0 -0.00011384 -0.5
+  rotation 0 1 0 -3.1415923071795864
+  controller "dynamic_obstacle_controller"
+  name "obstacle(3)"
+}
+generic_agent {
+  translation 0 -0.00011384 -1
+  rotation 0 1 0 -3.1415923071795864
+  controller "dynamic_obstacle_controller"
+  name "obstacle(4)"
+}
+generic_agent {
+  translation 0 -0.00011384 0.5
+  rotation 0 1 0 -3.1415923071795864
+  controller "dynamic_obstacle_controller"
+  name "obstacle(1)"
+}
+generic_agent {
+  translation 0 -0.00011384 1
+  rotation 0 1 0 -3.1415923071795864
+  controller "dynamic_obstacle_controller"
+  name "obstacle(2)"
+}
+generic_agent {
+  translation 0.866 -0.00011384 1
+  rotation 0 1 0 -3.1415923071795864
+  controller "dynamic_obstacle_controller"
+  name "obstacle(8)"
+}
+generic_agent {
+  translation 0.866 -0.00011384 0.5
+  rotation 0 1 0 -3.1415923071795864
+  controller "dynamic_obstacle_controller"
+  name "obstacle(9)"
+}
+generic_agent {
+  translation 0.866 -0.00011384 0
+  rotation 0 1 0 -3.1415923071795864
+  controller "dynamic_obstacle_controller"
+  name "obstacle(10)"
+}
+generic_agent {
+  translation 0.866 -0.00011384 -0.5
+  rotation 0 1 0 -3.1415923071795864
+  controller "dynamic_obstacle_controller"
+  name "obstacle(12)"
+}
+generic_agent {
+  translation 0.866 -0.00011384 -1
+  rotation 0 1 0 -3.1415923071795864
+  controller "dynamic_obstacle_controller"
+  name "obstacle(13)"
+}
+WoodenBox {
+  translation 2.38 0.3 0
+  rotation -0.5773502691896258 0.5773502691896258 0.5773502691896258 2.0943951023931957
+  size 0.3 0.6 0.8
+}
+WoodenBox {
+  translation -2.39 0.3 0
+  rotation -0.5773502691896258 0.5773502691896258 0.5773502691896258 2.0943951023931957
+  name "wooden box(1)"
+  size 0.3 0.6 0.8
+}

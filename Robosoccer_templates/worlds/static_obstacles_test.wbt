@@ -1,0 +1,80 @@
+#VRML_SIM R2019b utf8
+WorldInfo {
+  basicTimeStep 4
+  contactProperties [
+    ttball_dribbler_contact {
+    }
+    ttball_default_contact {
+    }
+    omniwheel_default_contact {
+    }
+  ]
+}
+Viewpoint {
+  orientation 0.0017677653851580284 0.7071066717404192 0.7071046809247767 3.14353553455303
+  position -0.32040891556198287 10.000262461609312 0.06403651949637575
+  follow "akb_forward_1"
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+  castShadows FALSE
+}
+arena {
+  translation 0 -0.5 0
+}
+ball {
+  translation 0 0.0198956 0
+  rotation -0.00420993558024365 0.3985436515604442 0.9171397026861706 -2.99804537094803
+  controller "ball_controller"
+}
+generic_agent {
+  translation -1.9438 -0.000540383 -1.40076
+  rotation 0.00013177161687005575 0.9999999857784174 -0.00010525875758120135 -1.5844956422055978
+  controller "generic_agent_final_controller"
+  color 0.643137 0 0
+  name "akb_forward_1"
+}
+Robot {
+  translation 0 0.17 1.73
+  children [
+    Emitter {
+      name "left_emitter"
+      channel 3
+    }
+    Emitter {
+      name "right_emitter"
+      channel 2
+    }
+    Receiver {
+      channel 1
+    }
+    DEF CENTRAL_SERVER_SHAPE Shape {
+      appearance PBRAppearance {
+        baseColor 0 0.2 0.2
+        roughness 0.5
+      }
+      geometry Box {
+        size 0.3 0.3 0.2
+      }
+    }
+  ]
+  name "centralServer"
+  boundingObject USE CENTRAL_SERVER_SHAPE
+  controller "central_server_controller"
+  supervisor TRUE
+}
+team_server {
+  translation -1.79 0.22 1.78
+  name "right_server"
+  controller "game_server_controller"
+}
+WoodenBox {
+  translation 2.38 0.3 0
+  size 0.3 0.6 0.8
+}
+WoodenBox {
+  translation -2.39 0.3 0
+  name "wooden box(1)"
+  size 0.3 0.6 0.8
+}

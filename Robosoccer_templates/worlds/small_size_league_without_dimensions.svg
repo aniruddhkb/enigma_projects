@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg width="10400" height="7400" id="svg3081" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs id="defs3083">
+    <linearGradient id="linearGradient4277">
+      <stop style="stop-color:#000000;stop-opacity:1;" offset="0" id="stop4279"/>
+    </linearGradient>
+    <linearGradient id="linearGradient4271">
+      <stop style="stop-color:#000000;stop-opacity:0;" offset="0" id="stop4273"/>
+    </linearGradient>
+    <linearGradient id="linearGradient4275" x1="383.59586" y1="2591.6891" x2="4438.9408" y2="2591.6891" gradientUnits="userSpaceOnUse" gradientTransform="matrix(2.3775507,0,0,1.5055393,-532.91326,-6549.5284)" xlink:href="#linearGradient4271"/>
+    <linearGradient id="linearGradient4281" x1="383.59586" y1="2591.6891" x2="4438.9408" y2="2591.6891" gradientUnits="userSpaceOnUse" gradientTransform="matrix(2.3775507,0,0,1.5055393,-532.91326,-6549.5284)" xlink:href="#linearGradient4277"/>
+  </defs>
+  <g id="layer1" transform="translate(0,6347.6378)">
+    <rect style="fill:#00c100;fill-opacity:1;stroke:none" id="rect4367" width="10400" height="7400" x="5" y="-6352.6377"/>
+    <rect style="fill:url(#linearGradient4275);fill-opacity:1;fill-rule:evenodd;stroke:url(#linearGradient4281);stroke-width:40.58857346;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" id="rect3303" width="9639.4111" height="6639.4116" x="380.29428" y="-5967.3438"/>
+    <rect style="fill:#00b000;fill-opacity:1;stroke:none" id="rect4371" width="9600" height="6600" x="400" y="-5947.6377"/>
+    <g id="g4500">
+      <g transform="translate(10,0)" id="g4488">
+        <rect style="fill:#00aa00;fill-opacity:1;stroke:#ffffff;stroke-width:10.48846149;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:0;stroke-dasharray:20.97692343, 10.48846172;stroke-dashoffset:0;stroke-opacity:1" id="rect3089" width="8989.5117" height="5989.5117" x="689.2442" y="-5622.3936" ry="14.464052"/>
+        <rect style="fill:#ffffff;fill-opacity:1;stroke:none" id="rect4369" width="10" height="6000" x="5179" y="-5622.6377"/>
+        <ellipse style="fill:none;stroke:#ffffff;stroke-width:10;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" id="path4392" cx="5184" cy="-2650.3496" rx="497.71185" ry="497.71188"/>
+      </g>
+      <rect y="-2652.6377" x="692" height="10" width="9000" id="rect4418" style="fill:#ffffff;fill-opacity:1;stroke:none"/>
+      <rect ry="4.8163533" y="-3644.8547" x="699" height="1994.4343" width="994.43427" id="rect3089-3" style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:0;stroke-dasharray:20, 10;stroke-dashoffset:0;stroke-opacity:1"/>
+      <rect ry="4.8163533" y="-3644.8552" x="8695" height="1994.4343" width="994.43427" id="rect3089-3-2" style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:0;stroke-dasharray:20, 10;stroke-dashoffset:0;stroke-opacity:1"/>
+    </g>
+    <g id="g4272" transform="translate(4,0)">
+      <rect y="-3167.6377" x="490" height="20" width="200" id="rect7139" style="fill:#806600;fill-opacity:1;stroke:none"/>
+      <rect y="-2147.6377" x="490" height="20" width="200" id="rect7139-2" style="fill:#806600;fill-opacity:1;stroke:none"/>
+      <rect y="-3147.6377" x="490" height="1000" width="20" id="rect7139-2-6" style="fill:#806600;fill-opacity:1;stroke:none"/>
+    </g>
+    <g id="g4280" transform="translate(-6,0)">
+      <rect transform="scale(-1,1)" y="-3167.6377" x="-9900" height="20" width="200" id="rect7139-27" style="fill:#806600;fill-opacity:1;stroke:none"/>
+      <rect transform="scale(-1,1)" y="-2147.6377" x="-9900" height="20" width="200" id="rect7139-2-64" style="fill:#806600;fill-opacity:1;stroke:none"/>
+      <rect transform="scale(-1,1)" y="-3147.6377" x="-9900" height="1000" width="20" id="rect7139-2-6-5" style="fill:#806600;fill-opacity:1;stroke:none"/>
+    </g>
+  </g>
+</svg>

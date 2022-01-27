@@ -1,0 +1,276 @@
+PROTO generic_agent [
+    field SFVec3f translation 0 0 0
+    field SFRotation rotation 0 1 0 0 
+    field SFInt32 receiver_channel 4 
+    field SFInt32 emitter_channel 1
+    field SFString controller ""
+    field SFColor color 0.6 0.6 0.6
+    field SFString name ""
+]
+{
+    Robot {
+  translation IS translation
+  rotation IS rotation
+  children [
+    Receiver {
+      channel IS receiver_channel
+    }
+    Emitter {
+      channel IS emitter_channel
+    }
+    InertialUnit {
+    }
+    GPS {
+    }
+    HingeJoint {
+      jointParameters HingeJointParameters {
+        position -5537.399998389517
+        axis 0 0 1
+        anchor 0.06 0.04 0
+      }
+      device [
+        RotationalMotor {
+          name "roller_motor"
+          maxVelocity 200
+        }
+      ]
+      endPoint Solid {
+        translation 0.060000018865800135 0.039999975630063175 -5.157541060895884e-13
+        rotation -0.626437653806167 0.5511706392389666 0.5511685697994162 4.260854346546549
+        children [
+          DEF ROLLER_SHAPE Shape {
+            appearance PBRAppearance {
+              baseColor 0 0.5 0.5
+              roughness 0.5
+            }
+            geometry Cylinder {
+              height 0.05
+              radius 0.01
+            }
+          }
+        ]
+        name "solid(1)"
+        contactMaterial "dribbler"
+        boundingObject USE ROLLER_SHAPE
+        physics Physics {
+        }
+      }
+    }
+    SliderJoint {
+      jointParameters JointParameters {
+        position 0.010020000002748553
+        axis 1 0 0
+        minStop -0.03
+        maxStop 0.01
+        dampingConstant 0.1
+      }
+      device [
+        LinearMotor {
+          name "pusher_motor"
+          maxVelocity 100
+          maxForce 100
+        }
+      ]
+      endPoint Solid {
+        translation 0.08002000000142502 0.0149997 -2.84234e-12
+        rotation 0.00038710339845917985 1.1182031004163218e-05 -0.9999999250129578 8.993145353277236e-09
+        children [
+          DEF PUSHER_SHAPE Shape {
+            appearance PBRAppearance {
+              baseColor 0 0 1
+              roughness 0.5
+            }
+            geometry Box {
+              size 0.025 0.025 0.04
+            }
+          }
+        ]
+        contactMaterial "dribbler"
+        boundingObject USE PUSHER_SHAPE
+        physics Physics {
+        }
+      }
+    }
+    HingeJoint {
+      jointParameters HingeJointParameters {
+        position -2577.8946185848918
+        axis 0.707 0 0.707
+        anchor 0.0471239 0.015 0.0471239
+      }
+      device [
+        PositionSensor {
+          name "encoder_1"
+        }
+        RotationalMotor {
+          name "motor_1"
+          maxVelocity 60
+          maxTorque 0.45
+        }
+      ]
+      endPoint Solid {
+        translation 0.04242823141117198 0.015000798319255755 0.04242476813269537
+        rotation 0.7642310124826357 0.0886780014688574 -0.6388170094911804 1.5787297170104877
+        children [
+          DEF WHEEL_SHAPE Shape {
+            appearance PBRAppearance {
+              baseColor 0.4 0.4 0.4
+              roughness 0.5
+            }
+            geometry Cylinder {
+              height 0.01
+              radius 0.015
+            }
+          }
+        ]
+        name "wheel_1"
+        contactMaterial "omniwheel"
+        boundingObject USE WHEEL_SHAPE
+        physics Physics {
+          density -1
+          mass 0.05
+        }
+      }
+    }
+    HingeJoint {
+      jointParameters HingeJointParameters {
+        position -2835.782847560155
+        axis 0.707 0 0.707
+        anchor 0.0471239 0.015 0.0471239
+      }
+      device [
+        PositionSensor {
+          name "encoder_2"
+        }
+        RotationalMotor {
+          name "motor_2"
+          maxVelocity 60
+          maxTorque 0.45
+        }
+      ]
+      endPoint Solid {
+        translation -0.0424237366091764 0.015000041443500589 -0.04242936382252608
+        rotation 0.6182895608587143 -0.1128048725182616 -0.7778130107354061 1.5836912011095257
+        children [
+          USE WHEEL_SHAPE
+        ]
+        name "wheel_2"
+        contactMaterial "omniwheel"
+        boundingObject USE WHEEL_SHAPE
+        physics Physics {
+          density -1
+          mass 0.05
+        }
+      }
+    }
+    HingeJoint {
+      jointParameters HingeJointParameters {
+        position 3060.214895556645
+        axis 0.707 0 -0.707
+        anchor 0.0471239 0.015 -0.0471239
+      }
+      device [
+        PositionSensor {
+          name "encoder_3"
+        }
+        RotationalMotor {
+          name "motor_3"
+          maxVelocity 60
+          maxTorque 0.45
+        }
+      ]
+      endPoint Solid {
+        translation 0.042422365037620285 0.015003658603785087 -0.04243073443297764
+        rotation 0.008070137318631557 -0.5735238284635359 0.819149126269562 4.200127207981814
+        children [
+          USE WHEEL_SHAPE
+        ]
+        name "wheel_3"
+        contactMaterial "omniwheel"
+        boundingObject USE WHEEL_SHAPE
+        physics Physics {
+          density -1
+          mass 0.05
+        }
+      }
+    }
+    HingeJoint {
+      jointParameters HingeJointParameters {
+        position 2801.936360524295
+        axis 0.707 0 -0.707
+        anchor 0.0471239 0.015 -0.0471239
+      }
+      device [
+        PositionSensor {
+          name "encoder_4"
+        }
+        RotationalMotor {
+          name "motor_4"
+          maxVelocity 60
+          maxTorque 0.45
+        }
+      ]
+      endPoint Solid {
+        translation -0.04242956936914024 0.015004647447576139 0.042423431121878595
+        rotation 0.37304662753941054 -0.3451875912629301 0.8612094637889023 4.576700486606964
+        children [
+          USE WHEEL_SHAPE
+        ]
+        name "wheel_4"
+        contactMaterial "omniwheel"
+        boundingObject USE WHEEL_SHAPE
+        physics Physics {
+          density -1
+          mass 0.05
+        }
+      }
+    }
+    DEF CHASSIS_GROUP Group {
+      children [
+        Transform {
+          translation 0.05 0.025 -0.026
+          rotation 0 1 0 -5.307179586466759e-06
+          children [
+            DEF HOLDER_SHAPE Shape {
+              appearance PBRAppearance {
+                baseColor IS color
+                roughness 0.5
+              }
+              geometry Box {
+                size 0.05 0.01 0.002
+              }
+            }
+          ]
+        }
+        Transform {
+          translation 0.05 0.025 0.026
+          rotation 0 1 0 3.38699e-06
+          children [
+            USE HOLDER_SHAPE
+          ]
+        }
+        Transform {
+          translation 0 0.025 0
+          children [
+            Shape {
+              appearance PBRAppearance {
+                baseColor IS color
+                roughness 0.5
+              }
+              geometry Cylinder {
+                height 0.04
+                radius 0.05
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+  name IS name
+  boundingObject USE CHASSIS_GROUP
+  physics Physics {
+    mass 5
+  }
+  controller IS controller
+}
+}

@@ -1,0 +1,161 @@
+#VRML_SIM R2020b utf8
+WorldInfo {
+  basicTimeStep 16
+  contactProperties [
+    ContactProperties {
+      material1 "omniwheel"
+      coulombFriction [
+        0, 0.5, 0.1
+      ]
+    }
+  ]
+}
+Viewpoint {
+  orientation -0.13311249395702796 0.9551037985316364 0.26468433648967504 2.222874488204501
+  position 0.4287061143545036 0.15179808928054647 -0.2627150517840529
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+RectangleArena {
+}
+Robot {
+  translation 0.2821406071120327 0.014981650631172098 -0.12518636500753413
+  rotation 1.9586149192943942e-07 0.9999999999999568 2.192389363312467e-07 -1.6625320817347733
+  children [
+    HingeJoint {
+      jointParameters HingeJointParameters {
+        position 580.3676101154647
+        anchor 0.06 0 0
+      }
+      device [
+        RotationalMotor {
+          name "motor_1"
+          maxVelocity 60
+        }
+      ]
+      endPoint Solid {
+        translation 0.06 0 0
+        rotation 0.6753413558907488 -0.6753438365626183 0.2963524176390811 2.565380578413239
+        children [
+          DEF WHEEL_SHAPE Shape {
+            appearance PBRAppearance {
+              baseColor 0.5 0.5 0.5
+              roughness 1
+            }
+            geometry Cylinder {
+              height 0.005
+              radius 0.015
+            }
+          }
+        ]
+        name "wheel_1"
+        contactMaterial "omniwheel"
+        boundingObject USE WHEEL_SHAPE
+        physics Physics {
+        }
+        linearVelocity 1.3940025268313084e-15 1.4115819522229093e-16 -2.444187663791447e-16
+        angularVelocity -4.4289024373282324e-15 2.761076296561226e-17 -1.5838391936706959e-15
+      }
+    }
+    HingeJoint {
+      jointParameters HingeJointParameters {
+        position 376.59605376874987
+        anchor -0.06 0 0
+      }
+      device [
+        RotationalMotor {
+          name "motor_2"
+          maxVelocity 60
+        }
+      ]
+      endPoint Solid {
+        translation -0.06 0 0
+        rotation -0.19257613577922275 0.19257684315216692 0.9621998708220076 1.6093235491374736
+        children [
+          USE WHEEL_SHAPE
+        ]
+        name "wheel_2"
+        contactMaterial "omniwheel"
+        boundingObject USE WHEEL_SHAPE
+        physics Physics {
+        }
+        linearVelocity 1.0715111950323367e-15 -4.680083438638756e-16 3.926202969414618e-16
+        angularVelocity -6.0389081929588576e-15 8.949575282204194e-16 3.734352158012952e-16
+      }
+    }
+    HingeJoint {
+      jointParameters HingeJointParameters {
+        position -947.3652136817574
+        axis 0 0 1
+        anchor 0 0 0.06
+      }
+      device [
+        RotationalMotor {
+          name "motor_3"
+          maxVelocity 60
+        }
+      ]
+      endPoint Solid {
+        translation 5.4180159290541897e-08 -9.581113876359542e-09 0.059999992921564924
+        rotation -0.6445908329316068 -0.5406037389339268 -0.5406017531891625 4.286715786423849
+        children [
+          USE WHEEL_SHAPE
+        ]
+        name "wheel_3"
+        contactMaterial "omniwheel"
+        boundingObject USE WHEEL_SHAPE
+        physics Physics {
+          mass 0.05
+        }
+        linearVelocity -7.316970092056019e-16 4.283108708149955e-17 -2.0700755451859066e-16
+        angularVelocity 5.720219730677866e-15 7.21491145650666e-16 -1.5558439891999291e-15
+      }
+    }
+    HingeJoint {
+      jointParameters HingeJointParameters {
+        position -1151.1397337893989
+        axis 0 0 1
+        anchor 0 0 -0.06
+      }
+      device [
+        RotationalMotor {
+          name "motor_4"
+          maxVelocity 60
+        }
+      ]
+      endPoint Solid {
+        translation 0 0 -0.06
+        rotation -0.6746923071813139 0.5219158417584352 0.5219139246580223 4.328665756750631
+        children [
+          USE WHEEL_SHAPE
+        ]
+        name "wheel_4"
+        contactMaterial "omniwheel"
+        boundingObject USE WHEEL_SHAPE
+        physics Physics {
+          density -1
+          mass 0.05
+        }
+        linearVelocity -1.6470852756218513e-15 -1.5812758365177048e-17 -1.5959334854899667e-16
+        angularVelocity -1.2879737392844014e-15 1.7623098016614252e-15 -7.614881448975909e-16
+      }
+    }
+    DEF CHASSIS_SHAPE Shape {
+      appearance PBRAppearance {
+        baseColor 0.8 0.8 0.8
+      }
+      geometry Cylinder {
+        height 0.01
+        radius 0.05
+      }
+    }
+  ]
+  boundingObject USE CHASSIS_SHAPE
+  physics Physics {
+  }
+  controller "omniwheel_test"
+  linearVelocity -1.5178766587567342e-16 -2.261727773485167e-17 5.09179111330072e-16
+  angularVelocity 2.58943125862894e-15 1.4153858714081389e-15 1.7437250932804131e-15
+}

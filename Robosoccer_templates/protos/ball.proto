@@ -1,0 +1,40 @@
+PROTO ball
+[
+    field SFVec3f translation 0 0 0
+    field SFRotation rotation 0 1 0 0 
+    field SFInt32 emitter_channel 1 
+    field SFString controller ""
+]
+{
+    Robot {
+  translation IS translation
+  rotation IS rotation
+  children [
+    Emitter {
+      channel IS emitter_channel
+    }
+    GPS {
+    }
+    DEF BALL_SHAPE Shape {
+      appearance PBRAppearance {
+        baseColor 0.5 0 0
+        roughness 0.5
+        metalness 0
+      }
+      geometry Sphere {
+        radius 0.02
+        subdivision 24
+        ico FALSE
+      }
+    }
+  ]
+  name "ball"
+  contactMaterial "ttball"
+  boundingObject USE BALL_SHAPE
+  physics Physics {
+    density -1
+    mass 0.3
+  }
+  controller IS controller
+}
+}

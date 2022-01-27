@@ -1,0 +1,10 @@
+PROTO ttball_default_contact
+[]
+{
+    ContactProperties {
+      material1 "ttball"
+      coulombFriction [
+        0.3
+      ]
+    }
+}
